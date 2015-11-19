@@ -11,7 +11,7 @@
 
 ## What is Express?
 
-[Express](http://expressjs.com/) is a (relatively) lightweight server-side web framework that's written in JavaScript. We've already seen, with the help of the `http` module, how a web application can be built up in Node; with Express, we'll take it to the next level and make our apps configurable and easily extensible.
+[Express](http://expressjs.com/) is a (relatively) lightweight server-side web framework that's written in JavaScript. We've already seen, with the help of the `http` module, how a web application can be built up in Node; with express, we'll take it to the next level and make our apps configurable and easily extensible.
 
 Consider a simple web application - People and Pets, where a Person has many Pets. How might we have set that up?
 
@@ -35,7 +35,7 @@ Maybe something like this?
     └── testPetModel.js
 ```
 
-Here's how an equivalent Express application might look. Keep in mind that both Node and Express are *super-unopinionated* about how we structure our applications, so to a certain extent this structure is arbitrary; we've given you this structure for a reason, though, as you'll see soon.
+Here's how an equivalent express application might look. Keep in mind that both Node and express are *super-unopinionated* about how we structure our applications, so to a certain extent this structure is arbitrary; we've given you this structure for a reason, though, as you'll see soon.
 
 ```bash
 .
@@ -59,7 +59,7 @@ Here's how an equivalent Express application might look. Keep in mind that both 
 
 Not too dissimilar, right? In fact, if we were to look closely at both `models` folders, we might even discover that they were identical!
 
-One interesting thing about Express that distinguishes it from Rails is that it has no built-in conception of a database - we have to explicitly link it up to whatever sort of data store we're using. In other words, pretty much all that Express does is routing, control, and (as appropriate) handling server-side view rendering.
+One interesting thing about express that distinguishes it from Rails is that it has no built-in conception of a database - we have to explicitly link it up to whatever sort of data store we're using. In other words, pretty much all that express does is routing, control, and (as appropriate) handling server-side view rendering.
 
 Let's create a new express app.
 
@@ -196,7 +196,7 @@ var router = express.Router(); // use the router module from express
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'express' });
 });
 
 module.exports = router; // export the router object so we can use it in app.js
@@ -244,7 +244,7 @@ This is where you have your logging middleware write logs. Make sure to add this
 
 ## How Does Routing Compare with Rails?
 
-Defining routes in Express is pretty straightforward. Here's how we might take our app and define some basic routes. Note, we're just sending back strings to the client for these examples. These strings should serve (no pun) to compare express routes to Rails routes.
+Defining routes in express is pretty straightforward. Here's how we might take our app and define some basic routes. Note, we're just sending back strings to the client for these examples. These strings should serve (no pun) to compare express routes to Rails routes.
 
 ```javascript
 app.get('/people', function(req, res){
@@ -255,7 +255,7 @@ app.post('/people', function(req, res){
 })
 ```
 
-Extracting things like IDs from urls is extremely easy with Express - much simpler than doing it by hand.
+Extracting things like IDs from urls is extremely easy with express - much simpler than doing it by hand.
 
 ```javascript
 app.get('/people/:id', function(req, res){
@@ -284,7 +284,7 @@ app.route('/people/:id')
       });
 ```
 
-Usually, though, we want modular 'mini-routers', which can then be re-integrated back into Express. This is a common approach when you have lots of routes, and in fact is also the approach being followed in the example above - each file inside the `routes` directory holds a single mini-router, set up as follows.
+Usually, though, we want modular 'mini-routers', which can then be re-integrated back into express. This is a common approach when you have lots of routes, and in fact is also the approach being followed in the example above - each file inside the `routes` directory holds a single mini-router, set up as follows.
 
 ```javascript
 var express = require('express');
@@ -319,7 +319,7 @@ app.use('/pets', require('./routes/pets'));
 ...
 ```
 
-In the context of Express, these little 'plug-ins' that get added into the app are called **middleware**.
+In the context of express, these little 'plug-ins' that get added into the app are called **middleware**.
 
 [License](LICENSE)
 ------------------
