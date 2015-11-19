@@ -7,7 +7,6 @@
 - Compare and contrast the structure of an express.js app vs one made using the `http` module.
 - Build a simple application using express and set it running on a port.
 - Write route module with basic routes.
-- Explain and use the express concepts of "handler chains".
 
 ## What is Express?
 
