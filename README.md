@@ -330,7 +330,7 @@ Create a new route module called `hello.js`. Inside that module, define a few ro
 Request: GET /hello
 Response: "Hello, World!"
 
-Request: GET /hello/jeff
+Request: GET /hello/Jeff
 Response: "Hello, Jeff!"
 ```
 
