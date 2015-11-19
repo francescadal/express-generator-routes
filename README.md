@@ -342,7 +342,7 @@ Create a time server by defining a new route module called `time.js`. Inside tha
 
 ```text
 Request: GET /time
-Response: "Thu Nov 19 2015 11:59:37 GMT-0500 (EST)"
+Response: "2015-11-19T17:23:40.440Z"
 ```
 
 [License](LICENSE)
