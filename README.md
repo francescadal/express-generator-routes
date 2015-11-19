@@ -336,10 +336,6 @@ Response: "Hello, Jeff!"
 
 Let's construct that module together. Next, we connect that module to our app over in `app.js`. Finally, let's test our work by running our server (`npm start`) and navigating to our endpoints.
 
-## Lab: Echo Server
-
-You defined an echo server using the `http` module. Do the same thing by adding a new route module called `echo.js`. Test your work by starting your server and navigating to your endpoint.
-
 ## Lab: What Time Is It?
 
 Create a time server by defining a new route module called `time.js`. Inside that module, define a route that responds like so:
