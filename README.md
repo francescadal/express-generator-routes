@@ -312,14 +312,42 @@ module.exports = router;
 These separate stand-alone routers then get brought back together in the main JS file which `require`s them. The URL parts of the routes get concatenated when we define routers in modules and `.use` them.
 
 ```
-...
+// app.js
+// ...
 app.use('/', require('./routes/index'));
-app.use('/people', require('./routes/people')); // what would the full route to people#index be?
+app.use('/people', require('./routes/people')); // what would the full route to people#show be?
 app.use('/pets', require('./routes/pets'));
-...
+// ...
 ```
 
 In the context of express, these little 'plug-ins' that get added into the app are called **middleware**.
+
+## Exercise: Hello, Express
+
+Create a new route module called `hello.js`. Inside that module, define a few routes that responds like so:
+
+```text
+Request: GET /hello
+Response: "Hello, World!"
+
+Request: GET /hello/jeff
+Response: "Hello, Jeff!"
+```
+
+Let's construct that module together. Next, we connect that module to our app over in `app.js`. Finally, let's test our work by running our server (`npm start`) and navigating to our endpoints.
+
+## Lab: Echo Server
+
+You defined an echo server using the `http` module. Do the same thing by adding a new route module called `echo.js`. Test your work by starting your server and navigating to your endpoint.
+
+## Lab: What Time Is It?
+
+Create a time server by defining a new route module called `time.js`. Inside that module, define a route that responds like so:
+
+```text
+Request: GET /time
+Response: "Thu Nov 19 2015 11:59:37 GMT-0500 (EST)"
+```
 
 [License](LICENSE)
 ------------------
