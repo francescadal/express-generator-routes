@@ -11,7 +11,7 @@
 
 ## What is Express?
 
-[Express](http://expressjs.com/) is a (relatively) lightweight server-side web framework that's written in JavaScript. We've already seen, with the help of the `http` module, how a web application can be built up in Node; with express, we'll take it to the next level and make our apps configurable and easily extensible.
+[Express](http://expressjs.com/) is a (relatively) lightweight server-side web framework that's written in JavaScript. We've already seen, with the help of the `http` module, how a web application can be built up in node; with express, we'll take it to the next level and make our apps configurable and easily extensible.
 
 Consider a simple web application - People and Pets, where a Person has many Pets. How might we have set that up?
 
@@ -35,7 +35,7 @@ Maybe something like this?
     └── testPetModel.js
 ```
 
-Here's how an equivalent express application might look. Keep in mind that both Node and express are *super-unopinionated* about how we structure our applications, so to a certain extent this structure is arbitrary; we've given you this structure for a reason, though, as you'll see soon.
+Here's how an equivalent express application might look. Keep in mind that both node and express are *super-unopinionated* about how we structure our applications, so to a certain extent this structure is arbitrary; we've given you this structure for a reason, though, as you'll see soon.
 
 ```bash
 .
